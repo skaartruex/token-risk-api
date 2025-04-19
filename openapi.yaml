@@ -1,4 +1,4 @@
-openapi: "3.0.1"
+openapi: "3.1.0"
 info:
   title: TrueX Token Risk API
   version: 1.0.0
@@ -18,20 +18,22 @@ paths:
             type: string
           description: Contract address of the token
       responses:
-        '200':
+        "200":
           description: Token risk report
           content:
             application/json:
               schema:
                 type: object
+                title: TokenRiskResponse
   /.well-known/openapi.yaml:
     get:
       summary: Serve OpenAPI spec for GPT plugin
       operationId: serveOpenAPI
       responses:
-        '200':
+        "200":
           description: OpenAPI YAML file
           content:
             text/yaml:
               schema:
                 type: string
+                title: OpenAPISpecText
