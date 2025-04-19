@@ -12,4 +12,4 @@ def get_token_risk(token_address: str = Query(..., description="Token address to
 
 @app.get("/.well-known/openapi.yaml")
 def get_openapi():
-    return FileResponse("openapi.yaml", media_type="text/yaml")
+    return FileResponse("openapi.yaml", media_type="text/yaml")# dummy change
