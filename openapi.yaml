@@ -25,6 +25,26 @@ paths:
               schema:
                 type: object
                 title: TokenRiskResponse
+                properties:
+                  trust_score:
+                    type: number
+                    description: The overall trust score (0-100)
+                  holder_distribution_score:
+                    type: number
+                    description: Score for holder concentration
+                  info_completeness_score:
+                    type: number
+                    description: Score for completeness of token info
+                  pool_quality_score:
+                    type: number
+                    description: Score for liquidity pool quality
+                  token_age_score:
+                    type: number
+                    description: Score for token longevity
+                  transaction_volume_score:
+                    type: number
+                    description: Score for trading activity
+
   /.well-known/openapi.yaml:
     get:
       summary: Serve OpenAPI spec for GPT plugin
