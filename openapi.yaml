@@ -1,0 +1,37 @@
+openapi: 3.0.1
+info:
+  title: TrueX Token Risk API
+  version: 1.0.0
+  description: Evaluates token trust scores based on Birdeye data
+servers:
+  - url: https://yourdomain.com
+paths:
+  /risk:
+    get:
+      summary: Get trust score for a token
+      operationId: getTokenRisk
+      parameters:
+        - name: token_address
+          in: query
+          required: true
+          schema:
+            type: string
+          description: Contract address of the token
+      responses:
+        '200':
+          description: Token risk report
+          content:
+            application/json:
+              schema:
+                type: object
+  /.well-known/openapi.yaml:
+    get:
+      summary: Serve OpenAPI spec for GPT plugin
+      operationId: serveOpenAPI
+      responses:
+        '200':
+          description: OpenAPI YAML file
+          content:
+            text/yaml:
+              schema:
+                type: string
