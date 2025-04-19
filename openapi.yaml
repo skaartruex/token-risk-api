@@ -4,7 +4,7 @@ info:
   version: 1.0.0
   description: Evaluates token trust scores based on Birdeye data
 servers:
-  - url: https://yourdomain.com
+  - url: https://token-risk-api.onrender.com
 paths:
   /risk:
     get:
